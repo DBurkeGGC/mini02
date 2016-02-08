@@ -5,10 +5,6 @@ get '/' do
   erb :index
 end
 
-post '/' do
-  erb :index
-end
-
 post '/leapyear/' do
   flag = LeapYear.new.is_leap_year?( params[:year].to_i )
   if(flag)
